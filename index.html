@@ -404,9 +404,39 @@
     <!-- Модальное окно -->
     <div class="backdrop is-hidden"  data-backdrop >
         <div class="modal" id="modal">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, corrupti nihil aliquam sapiente itaque voluptate repellendus consequatur est porro fugit
-            </p>
-            <button class="btn-modal" data-close-modal>X</button>
+            <button class="btn-modal" data-close-modal>
+                <svg width="18" height="18">
+                    <use href="./img/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
+            <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+            <form class="form-feedback" action="">
+                <lable class="form-field">
+                    <span class="form-subtitle">Имя</span>
+                    <input class="form-info" type="text" name="name" placeholder=" ">
+                    <svg width="18" height="18">
+                        <use href="./img/symbol-defs.svg#icon-name"></use>
+                    </svg>
+                </lable>
+                <lable class="form-field">
+                    <span class="form-subtitle">Телефон</span>
+                    <input class="form-info" type="tel" name="telephone" placeholder=" ">
+                    <svg width="18" height="18">
+                        <use href="./img/symbol-defs.svg#icon-call"></use>
+                    </svg>
+                </lable>
+                <lable class="form-field">
+                    <span class="form-subtitle">Почта</span>
+                    <input class="form-info" type="email" name="email" placeholder=" ">
+                    <svg width="18" height="18">
+                        <use href="./img/symbol-defs.svg#icon-mail"></use>
+                    </svg>
+                </lable>
+                <lable class="form-field">
+                    <span class="form-subtitle">Комментарий</span>
+                    <textarea name="message" rows="5" placeholder="Введите текст"></textarea>
+                </lable>
+            </form>
         </div>
     </div>
 
