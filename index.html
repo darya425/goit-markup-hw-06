@@ -410,7 +410,7 @@
                 </svg>
             </button>
             <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
-            <form class="form-feedback" action="">
+            <form class="form-feedback js-speaker-form" >
                 <label class="form-field">
                     <span class="form-subtitle">Имя</span>
                     <input class="form-info" type="text" name="name" placeholder=" ">
@@ -439,7 +439,7 @@
                 <label class="license-wrapper">
                     <input class="checkbox" type="checkbox" name="topic">
                     <span class="check-icon"></span>
-                    <span class="license">Соглашаюсь с рассылкой и принимаю <a class="license-link" href="">Условия договора</a></span>
+                    <span>Соглашаюсь с рассылкой и принимаю <a class="license-link" href="">Условия договора</a></span>
                 </label>
                 <button class="form-btn">Отправить</button>
             </form>
@@ -465,6 +465,21 @@
         function logBackdropClick() {
             console.log("Это клик в бекдроп");
         }
+    </script>
+    <script>
+        (() => {
+            document
+                .querySelector('.js-speaker-form')
+                .addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    new FormData(e.currentTarget).forEach((value, name) =>
+                        console.log(`${name}: ${value}`),
+                    );
+
+                    e.currentTarget.reset();
+                });
+        })();
     </script>
 </body>
 </html>

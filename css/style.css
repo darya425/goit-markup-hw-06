@@ -777,6 +777,13 @@ img {
   background-color: var(--primary-white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-modal:hover,
+.btn-modal:focus {
+  fill: var(--accent-color);
 }
 
 .form-feedback {
@@ -791,14 +798,6 @@ img {
   flex-direction: column;
   margin-bottom: 10px;
   text-align: left;
-}
-
-.form-field:focus-within > .form-info {
-  border-color: var(--accent-color);
-}
-
-.form-field:focus-within > .form-icon {
-  fill: var(--accent-color);
 }
 
 .form-field.comment {
@@ -822,12 +821,16 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-icon {
   position: absolute;
   top: 30px;
   left: 12px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .message {
@@ -835,6 +838,18 @@ img {
   resize: none;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:focus-within > .form-info,
+.form-field:focus-within > .message {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.form-field:focus-within > .form-icon {
+  fill: var(--accent-color);
 }
 
 .form-info::placeholder {
@@ -884,9 +899,6 @@ img {
   background-origin: border-box;
 }
 
-.license {
-}
-
 .license-link {
   color: var(--accent-color);
 }
@@ -903,7 +915,14 @@ img {
   line-height: 1.87;
   letter-spacing: 0.06em;
   background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   border-color: transparent;
   border-radius: 4px;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-btn:hover,
+.form-btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
