@@ -411,31 +411,38 @@
             </button>
             <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
             <form class="form-feedback" action="">
-                <lable class="form-field">
+                <label class="form-field">
                     <span class="form-subtitle">Имя</span>
                     <input class="form-info" type="text" name="name" placeholder=" ">
-                    <svg width="18" height="18">
+                    <svg class="form-icon" width="18" height="18">
                         <use href="./img/symbol-defs.svg#icon-name"></use>
                     </svg>
-                </lable>
-                <lable class="form-field">
+                </label>
+                <label class="form-field">
                     <span class="form-subtitle">Телефон</span>
                     <input class="form-info" type="tel" name="telephone" placeholder=" ">
-                    <svg width="18" height="18">
+                    <svg class="form-icon" width="18" height="18">
                         <use href="./img/symbol-defs.svg#icon-call"></use>
                     </svg>
-                </lable>
-                <lable class="form-field">
+                </label>
+                <label class="form-field">
                     <span class="form-subtitle">Почта</span>
                     <input class="form-info" type="email" name="email" placeholder=" ">
-                    <svg width="18" height="18">
+                    <svg class="form-icon" width="18" height="18">
                         <use href="./img/symbol-defs.svg#icon-mail"></use>
                     </svg>
-                </lable>
-                <lable class="form-field">
+                </label>
+                <label class="form-field comment">
                     <span class="form-subtitle">Комментарий</span>
-                    <textarea name="message" rows="5" placeholder="Введите текст"></textarea>
-                </lable>
+                    <textarea class="message" name="message" rows="5" placeholder="Введите текст"></textarea>
+                </label>
+                <label class="license-wrapper">
+                    <span class="check-icon"></span>
+                    <input class="checkbox" type="checkbox" name="topic">
+                    
+                    <span class="license"></span>Соглашаюсь с рассылкой и принимаю <a class="license-link" href="">Условия договора</a></span>
+                </label>
+                <button class="form-btn">Отправить</button>
             </form>
         </div>
     </div>
